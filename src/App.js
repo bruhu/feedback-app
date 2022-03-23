@@ -4,19 +4,26 @@ function App() {
     { id: 2, text: 'two' },
     { id: 3, text: 'three' },
   ]
+
+  const loading = false
+  const showComments = true
+
+  if (loading) return <p>Loading...</p>
+
   return (
     <div className='container'>
       <h1>My Feedback App</h1>
-      <p>Here's a paragraph - did it solve the issue?</p>
 
-      <div className='comments'>
-        <h3>Comments ({comments.length})</h3>
+      {showComments && (
+        <div className='comments'>
+          <h3>Comments ({comments.length})</h3>
 
-        <ul></ul>
-        {comments.map((comment, index) => (
-          <li key={index}>Comment {comment.text}</li>
-        ))}
-      </div>
+          <ul></ul>
+          {comments.map((comment, index) => (
+            <li key={index}>Comment {comment.text}</li>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
