@@ -8,14 +8,14 @@ function App() {
   const loading = false
   const showComments = true
   const commentBlock = (
-<div className='comments'>
-          <h3>Comments ({comments.length})</h3>
+    <div className='comments'>
+      <h3>Comments ({comments.length})</h3>
 
-          <ul></ul>
-          {comments.map((comment, index) => (
-            <li key={index}>Comment {comment.text}</li>
-          ))}
-        </div>
+      <ul></ul>
+      {comments.map((comment, index) => (
+        <li key={index}>Comment {comment.text}</li>
+      ))}
+    </div>
   )
 
   if (loading) return <p>Loading...</p>
