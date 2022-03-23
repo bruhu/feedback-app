@@ -7,15 +7,8 @@ function App() {
 
   const loading = false
   const showComments = true
-
-  if (loading) return <p>Loading...</p>
-
-  return (
-    <div className='container'>
-      <h1>My Feedback App</h1>
-
-      {showComments && (
-        <div className='comments'>
+  const commentBlock = (
+<div className='comments'>
           <h3>Comments ({comments.length})</h3>
 
           <ul></ul>
@@ -23,7 +16,15 @@ function App() {
             <li key={index}>Comment {comment.text}</li>
           ))}
         </div>
-      )}
+  )
+
+  if (loading) return <p>Loading...</p>
+
+  return (
+    <div className='container'>
+      <h1>My Feedback App</h1>
+
+      {showComments && commentBlock}
     </div>
   )
 }
