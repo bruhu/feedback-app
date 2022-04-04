@@ -1,6 +1,6 @@
-function Card() {
+function Card({children}) {
   return (
-    <div>Card</div>
+    <div className="card">{children}</div>
   )
 }
 
