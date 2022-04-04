@@ -1,6 +1,14 @@
-function FeedbackList() {
+function FeedbackList({feedback}) {
+  if(!feedback || feedback.length === 0) {
+    return(<p>There's no feedback yet.</p>)
+  } 
+
   return (
-    <div>FeedbackList</div>
+    <div className="feedback-list">
+    {feedback.map((item) => (
+      <div>{item.rating}</div>
+    ))}
+    </div>
   )
 }
 
