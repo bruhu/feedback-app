@@ -6,6 +6,9 @@ function FeedbackStats({feedback}) {
   // default for the accumulator = 0
   0) / feedback.length
 
+  // display max 1 decimal
+  average = average.toFixed(1).replace(/[.,]0$/, '')
+
   return (
     <div className='feedback-stats'>
       <h4>{feedback.length} Reviews</h4>
