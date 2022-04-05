@@ -1,6 +1,8 @@
-function FeedbackStats() {
+function FeedbackStats({feedback}) {
   return (
-    <div>Feedback Stats</div>
+    <div className='feedback-stats'>
+      <h4>Items: {feedback.length}</h4>
+    </div>
   )
 }
 
