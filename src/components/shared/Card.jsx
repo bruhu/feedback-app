@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 
-
 // styled component
-
 function Card({children, reverse}) {
   return (
     // conditional class
