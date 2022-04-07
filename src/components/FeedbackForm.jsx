@@ -35,6 +35,9 @@ function FeedbackForm({handleAdd}) {
       }
 
       handleAdd(newFeedback)
+
+      // reset to placeholder
+      setText('')
     }
   }
 
