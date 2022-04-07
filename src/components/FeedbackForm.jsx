@@ -4,7 +4,7 @@ import Card from './shared/Card'
 import Button from './shared/Button'
 
 
-function FeedbackForm() {
+function FeedbackForm({handleAdd}) {
   const [text, setText] = useState('')
   const [rating, setRating] = useState('')
   const [btnDisabled, setBtnDisabled] = useState(true)
@@ -34,7 +34,7 @@ function FeedbackForm() {
         rating
       }
 
-      console.log('newFeedback object: ', newFeedback)
+      handleAdd(newFeedback)
     }
   }
 
