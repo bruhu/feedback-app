@@ -17,7 +17,7 @@ function FeedbackForm() {
         {/* @todo - rating select component */}
         <div className='input-group'>
           <input onChange={handleTextChange} type='text' placeholder='Write a review' value={text} />
-          <Button type='submit' version='secondary'>Send</Button>
+          <Button type='submit'>Send</Button>
         </div>
       </form>
     </Card>
