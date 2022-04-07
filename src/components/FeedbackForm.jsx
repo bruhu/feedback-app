@@ -3,7 +3,10 @@ import Card from "./shared/Card"
 function FeedbackForm() {
   return (
     <Card>
-      Form Component
+      <form>
+        <h2>How would you rate your experience with us?</h2>
+        {/* @todo - rating select component */}
+      </form>
     </Card>
   )
 }
