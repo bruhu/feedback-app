@@ -1,6 +1,8 @@
 function Button({ children, version, type, isDisabled}) {
   return (
-    <div>Button</div>
+    <div type={type} disabled={isDisabled} className={`btn btn-${version}`}>
+      {children}
+    </div>
   )
 }
 
