@@ -18,7 +18,7 @@ function FeedbackForm() {
       setMessage('Text must be at least 10 characters')
     } else {
       setBtnDisabled(false)
-      setMessage('Your feedback can be submitted')
+      setMessage(null)
     }
 
     setText(e.target.value)
