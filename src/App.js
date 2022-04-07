@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid'
 import { useState } from 'react'
 import Header from './components/Header'
 import FeedbackData from './data/FeedbackData'
@@ -16,6 +17,8 @@ function App() {
   }
 
   const addFeedback = (newFeedback) => {
+    // set missing id using package
+    newFeedback.id = uuidv4()
     console.log('add feedback:', newFeedback)
   }
 
