@@ -17,9 +17,10 @@ function App() {
   }
 
   const addFeedback = (newFeedback) => {
-    // set missing id using package
+    // set id
     newFeedback.id = uuidv4()
-    console.log('add feedback:', newFeedback)
+    // set new array w/ all existing items + new one at the beginning
+    setFeedback([newFeedback, ...feedback])
   }
 
   return (
