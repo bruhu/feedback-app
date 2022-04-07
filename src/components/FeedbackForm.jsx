@@ -30,7 +30,7 @@ function FeedbackForm() {
     <Card>
       <form>
         <h2>How would you rate your experience with us?</h2>
-        <RatingSelect/>
+        <RatingSelect select={(rating) => console.log('rating:', rating)}/>
         <div className='input-group'>
           <input onChange={handleTextChange} type='text' placeholder='Write a review' value={text} />
           <Button type='submit' isDisabled={btnDisabled} >Send</Button>
