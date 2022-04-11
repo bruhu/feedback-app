@@ -7,7 +7,9 @@ function AboutPage() {
         <h1>About the Project</h1>
         <p>This is a React app to leave product feedback</p>
         <p>v1.0.0</p>
-        <p href='/'></p>
+        <p>
+          <a href='/'>Take me back to the home page</a>
+        </p>
       </div>
     </Card>
   )
