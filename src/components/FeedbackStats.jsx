@@ -8,7 +8,7 @@ function FeedbackStats() {
   let average = feedback.reduce((accumulator, current) => {
     return accumulator + current.rating
   }, 
-  // default for the accumulator = 0
+  // set accumulator default to 0
   0) / feedback.length
 
   // display max 1 decimal
