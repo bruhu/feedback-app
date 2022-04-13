@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import FeedbackItem from './FeedbackItem'
 import FeedbackContext from '../context/FeedbackContext'
 
-function FeedbackList({handleDelete}) {
+function FeedbackList() {
   // extract from FeedbackContext's value
   const {feedback, deleteFeedback} = useContext(FeedbackContext)
 
