@@ -15,6 +15,7 @@ export const FeedbackProvider = ({ children }) => {
       value={
         {
           // everything we want to pass in
+          feedback
         }
       }
     >
@@ -23,3 +24,5 @@ export const FeedbackProvider = ({ children }) => {
     </FeedbackContext.Provider>
   )
 }
+
+export default FeedbackContext
