@@ -22,6 +22,11 @@ export const FeedbackProvider = ({ children }) => {
     },
   ])
 
+  const [feedbackEdit, setFeedbackEdit] = useState({
+    item: {},
+    edit: false,
+  })
+
   const addFeedback = (newFeedback) => {
     // set id
     newFeedback.id = uuidv4()
