@@ -27,6 +27,7 @@ export const FeedbackProvider = ({ children }) => {
     edit: false,
   })
 
+  // add feedback item
   const addFeedback = (newFeedback) => {
     // set id
     newFeedback.id = uuidv4()
@@ -34,11 +35,20 @@ export const FeedbackProvider = ({ children }) => {
     setFeedback([newFeedback, ...feedback])
   }
 
+  // delete feedback item
   const deleteFeedback = (id) => {
     if (window.confirm('Are you sure you want to delete?')) {
       setFeedback(feedback.filter((item) => item.id !== id))
       console.log('you deleted item id:', id)
     }
+  }
+
+  // set item to be updated
+  const editFeedback = (item) => {
+    setFeedbackEdit({
+      item,
+      edit: true,
+    })
   }
 
   return (
@@ -48,6 +58,7 @@ export const FeedbackProvider = ({ children }) => {
         feedback,
         deleteFeedback,
         addFeedback,
+        editFeedback,
       }}
     >
       {/* children = all the components that will access our context */}
