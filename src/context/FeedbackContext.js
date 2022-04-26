@@ -1,3 +1,4 @@
+import { isContentEditable } from '@testing-library/user-event/dist/utils'
 import { createContext, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -43,6 +44,14 @@ export const FeedbackProvider = ({ children }) => {
     }
   }
 
+  // update feedback item
+  const updateFeedback = (id, updItem) => {
+    console.log(id, updItem)
+    setFeedback(
+      feedback.map((item) => (item.id === id ? { ...item, ...updItem } : item))
+    )
+  }
+
   // set item to be updated
   const editFeedback = (item) => {
     setFeedbackEdit({
@@ -55,10 +64,11 @@ export const FeedbackProvider = ({ children }) => {
     <FeedbackContext.Provider
       value={{
         feedback,
+        feedbackEdit,
         deleteFeedback,
         addFeedback,
         editFeedback,
-        feedbackEdit,
+        updateFeedback,
       }}
     >
       {/* children = all the components that will access our context */}
