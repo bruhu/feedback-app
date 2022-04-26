@@ -15,7 +15,7 @@ function FeedbackForm({handleAdd}) {
 
   useEffect(() => {
     if(feedbackEdit.edit === true) {
-      setBtnDisabled = false
+      setBtnDisabled(false)
       setText(feedbackEdit.item.text)
       setRating(feedbackEdit.item.rating)
     }
