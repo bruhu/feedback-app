@@ -54,11 +54,11 @@ export const FeedbackProvider = ({ children }) => {
   return (
     <FeedbackContext.Provider
       value={{
-        // everything we want to pass in
         feedback,
         deleteFeedback,
         addFeedback,
         editFeedback,
+        feedbackEdit,
       }}
     >
       {/* children = all the components that will access our context */}
