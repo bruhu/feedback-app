@@ -8,7 +8,7 @@
 
 body {
   font-family: $font-poppins;
-  background-color: $dark-blue;
+  background-color: $background-gray;
   color: $white;
   line-height: 1.6;
 }
@@ -62,14 +62,14 @@ header {
 .rating li,
 .num-display {
   position: relative;
-  background: $light-gray;
+  background: $light-grey;
   width: 50px;
   height: 50px;
   padding: 10px;
   text-align: center;
   border-radius: 50%;
   font-size: 19px;
-  border: 1px $light-gray solid;
+  border: 1px $light-grey solid;
   transition: 0.3s;
 }
 
@@ -87,7 +87,7 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: $pink;
+  background: $yellow;
   color: $white;
 }
 
@@ -96,7 +96,7 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: $pink;
+  background: $yellow;
   color: $white;
 }
 
@@ -156,11 +156,11 @@ input:focus {
 }
 
 .btn-primary {
-  background-color: #202142;
+  background-color: $background-gray;
 }
 
 .btn-secondary {
-  background: $pink;
+  background: $yellow;
 }
 
 .btn:hover {
@@ -169,7 +169,7 @@ input:focus {
 }
 
 .btn:disabled {
-  background-color: #cccccc;
+  background-color: $gray;
   color: $dark-gray;
   cursor: auto;
 }
@@ -182,7 +182,7 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: rebeccapurple;
+  color: yellow;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
@@ -200,7 +200,7 @@ input:focus {
 }
 
 .about-link a:hover {
-  color: $pink;
+  color: $yellow;
 }
 
 .about h1 {
