@@ -8,7 +8,7 @@
 
 body {
   font-family: $font-poppins;
-  background-color: $background-grey;
+  background-color: $dark-grey;
   color: $white;
   line-height: 1.6;
 }
@@ -143,6 +143,11 @@ input:focus {
   cursor: pointer;
   background: none;
   border: none;
+  color: $dark-yellow !important;
+  :hover{
+    color: $light-yellow;
+    transition: 0.3s;
+  }
 }
 
 .edit {
@@ -160,7 +165,7 @@ input:focus {
 }
 
 .btn-primary {
-  background-color: $background-grey;
+  background-color: $dark-grey;
 }
 
 .btn-secondary {
@@ -186,7 +191,7 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: yellow;
+  color: $dark-yellow;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
