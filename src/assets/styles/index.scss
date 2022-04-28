@@ -206,6 +206,7 @@ input:focus {
 .about-link a {
   color: $white;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .about-link a:hover {
@@ -218,6 +219,11 @@ input:focus {
 
 .about p {
   margin: 10px 0;
+}
+
+.about a {
+  text-decoration: none;
+  color: $dark-yellow;
 }
 
 @media (max-width: 600px) {
