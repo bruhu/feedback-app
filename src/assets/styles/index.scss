@@ -1,5 +1,4 @@
 @import './variables';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,9 +7,9 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #202142;
-  color: #fff;
+  font-family: $font-poppins;
+  background-color: $dark-blue;
+  color: $white;
   line-height: 1.6;
 }
 
@@ -34,8 +33,8 @@ header {
 }
 
 .card {
-  background-color: #fff;
-  color: #333;
+  background-color: $white;
+  color: $dark-gray;
   border-radius: 15px;
   padding: 40px 50px;
   margin: 20px 0;
@@ -44,7 +43,7 @@ header {
 
 .card.reverse {
   background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  color: $white;
 }
 
 .card h2 {
@@ -63,14 +62,14 @@ header {
 .rating li,
 .num-display {
   position: relative;
-  background: #f4f4f4;
+  background: $light-gray;
   width: 50px;
   height: 50px;
   padding: 10px;
   text-align: center;
   border-radius: 50%;
   font-size: 19px;
-  border: 1px #eee solid;
+  border: 1px $light-gray solid;
   transition: 0.3s;
 }
 
@@ -88,8 +87,8 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #ff6a95;
-  color: #fff;
+  background: $pink;
+  color: $white;
 }
 
 [type='radio'] {
@@ -97,14 +96,14 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #ff6a95;
-  color: #fff;
+  background: $pink;
+  color: $white;
 }
 
 .input-group {
   display: flex;
   flex-direction: row;
-  border: 1px solid #ccc;
+  border: 1px solid $gray;
   padding: 8px 10px;
   border-radius: 8px;
 }
@@ -120,7 +119,7 @@ input:focus {
 }
 
 .feedback-stats {
-  color: #fff;
+  color: $white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,10 +146,10 @@ input:focus {
 }
 
 .btn {
-  color: #fff;
+  color: $white;
   border: 0;
   border-radius: 8px;
-  color: #fff;
+  color: $white;
   width: 100px;
   height: 40px;
   cursor: pointer;
@@ -161,7 +160,7 @@ input:focus {
 }
 
 .btn-secondary {
-  background: #ff6a95;
+  background: $pink;
 }
 
 .btn:hover {
@@ -171,7 +170,7 @@ input:focus {
 
 .btn:disabled {
   background-color: #cccccc;
-  color: #333;
+  color: $dark-gray;
   cursor: auto;
 }
 
@@ -196,12 +195,12 @@ input:focus {
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
 .about-link a {
-  color: #fff;
+  color: $white;
   cursor: pointer;
 }
 
 .about-link a:hover {
-  color: #ff6a95;
+  color: $pink;
 }
 
 .about h1 {
