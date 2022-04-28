@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import './variables';
 
 * {
   box-sizing: border-box;
@@ -7,9 +7,9 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #202142;
-  color: #fff;
+  font-family: $font-poppins;
+  background-color: $dark-grey;
+  color: $white;
   line-height: 1.6;
 }
 
@@ -24,17 +24,21 @@ ul {
 }
 
 header {
+  background-color: $bg-black;
   height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  h2{
+    color: $yellow;
+  }
 }
 
 .card {
-  background-color: #fff;
-  color: #333;
+  background-color: $white;
+  color: $dark-grey;
   border-radius: 15px;
   padding: 40px 50px;
   margin: 20px 0;
@@ -43,7 +47,7 @@ header {
 
 .card.reverse {
   background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  color: $white;
 }
 
 .card h2 {
@@ -62,15 +66,15 @@ header {
 .rating li,
 .num-display {
   position: relative;
-  background: #f4f4f4;
+  background: $light-grey;
   width: 50px;
   height: 50px;
   padding: 10px;
   text-align: center;
   border-radius: 50%;
   font-size: 19px;
-  border: 1px #eee solid;
-  transition: 0.3s;
+  border: 1px $light-grey solid;
+  transition: $hover-transition;
 }
 
 .rating li label {
@@ -87,8 +91,8 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #ff6a95;
-  color: #fff;
+  background: $yellow;
+  color: $white;
 }
 
 [type='radio'] {
@@ -96,14 +100,14 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #ff6a95;
-  color: #fff;
+  background: $yellow;
+  color: $white;
 }
 
 .input-group {
   display: flex;
   flex-direction: row;
-  border: 1px solid #ccc;
+  border: 1px solid $grey;
   padding: 8px 10px;
   border-radius: 8px;
 }
@@ -119,7 +123,7 @@ input:focus {
 }
 
 .feedback-stats {
-  color: #fff;
+  color: $white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -139,6 +143,11 @@ input:focus {
   cursor: pointer;
   background: none;
   border: none;
+  color: $dark-yellow !important;
+  :hover{
+    color: $light-yellow;
+    transition: $hover-transition;
+  }
 }
 
 .edit {
@@ -146,21 +155,21 @@ input:focus {
 }
 
 .btn {
-  color: #fff;
+  color: $white;
   border: 0;
   border-radius: 8px;
-  color: #fff;
+  color: $white;
   width: 100px;
   height: 40px;
   cursor: pointer;
 }
 
 .btn-primary {
-  background-color: #202142;
+  background-color: $dark-grey;
 }
 
 .btn-secondary {
-  background: #ff6a95;
+  background: $yellow;
 }
 
 .btn:hover {
@@ -169,8 +178,8 @@ input:focus {
 }
 
 .btn:disabled {
-  background-color: #cccccc;
-  color: #333;
+  background-color: $grey;
+  color: $dark-grey;
   cursor: auto;
 }
 
@@ -182,7 +191,7 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: rebeccapurple;
+  color: $dark-yellow;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
@@ -195,12 +204,13 @@ input:focus {
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
  * document */
 .about-link a {
-  color: #fff;
+  color: $white;
   cursor: pointer;
+  transition: $hover-transition;
 }
 
 .about-link a:hover {
-  color: #ff6a95;
+  color: $yellow;
 }
 
 .about h1 {
@@ -209,6 +219,11 @@ input:focus {
 
 .about p {
   margin: 10px 0;
+}
+
+.about a {
+  text-decoration: none;
+  color: $dark-yellow;
 }
 
 @media (max-width: 600px) {
