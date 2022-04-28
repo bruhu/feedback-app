@@ -74,7 +74,7 @@ header {
   border-radius: 50%;
   font-size: 19px;
   border: 1px $light-grey solid;
-  transition: 0.3s;
+  transition: $hover-transition;
 }
 
 .rating li label {
@@ -146,7 +146,7 @@ input:focus {
   color: $dark-yellow !important;
   :hover{
     color: $light-yellow;
-    transition: 0.3s;
+    transition: $hover-transition;
   }
 }
 
@@ -206,7 +206,7 @@ input:focus {
 .about-link a {
   color: $white;
   cursor: pointer;
-  transition: 0.3s;
+  transition: $hover-transition;
 }
 
 .about-link a:hover {
