@@ -8,7 +8,7 @@
 
 body {
   font-family: $font-poppins;
-  background-color: $background-gray;
+  background-color: $background-grey;
   color: $white;
   line-height: 1.6;
 }
@@ -24,17 +24,21 @@ ul {
 }
 
 header {
+  background-color: $background-black;
   height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  h2{
+    color: $yellow;
+  }
 }
 
 .card {
   background-color: $white;
-  color: $dark-gray;
+  color: $dark-grey;
   border-radius: 15px;
   padding: 40px 50px;
   margin: 20px 0;
@@ -103,7 +107,7 @@ header {
 .input-group {
   display: flex;
   flex-direction: row;
-  border: 1px solid $gray;
+  border: 1px solid $grey;
   padding: 8px 10px;
   border-radius: 8px;
 }
@@ -156,7 +160,7 @@ input:focus {
 }
 
 .btn-primary {
-  background-color: $background-gray;
+  background-color: $background-grey;
 }
 
 .btn-secondary {
@@ -169,8 +173,8 @@ input:focus {
 }
 
 .btn:disabled {
-  background-color: $gray;
-  color: $dark-gray;
+  background-color: $grey;
+  color: $dark-grey;
   cursor: auto;
 }
 
